@@ -4,3 +4,9 @@ export type Project = {
     "version": number | null,
     "id": string
 }
+
+export type Stats = {
+    "timestamp": string,
+    "label": number,
+    "count": number
+}

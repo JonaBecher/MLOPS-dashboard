@@ -13,7 +13,7 @@ import {
     getSortedRowModel,
     useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
+import { ArrowUpDown, ChevronDown } from "lucide-react"
 
 import { Button } from "./button"
 import {
@@ -36,7 +36,6 @@ import {useQuery} from "react-query";
 import {getProjects} from "../../api/project/projectCalls";
 import {Project} from "../../api/project/projectTypes";
 import {useParams} from "next/navigation";
-import {useMemo, useRef} from "react";
 import {getDevices} from "../../api/device/deviceCalls";
 
 export const columns: ColumnDef<Device>[] = [
@@ -83,7 +82,7 @@ export const columns: ColumnDef<Device>[] = [
                         variant="ghost"
                         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                     >
-                        Model Version
+                        Newest Version
                         <ArrowUpDown className="ml-2 h-4 w-4" />
                     </Button>
                 </div>
@@ -148,11 +147,8 @@ export const columns: ColumnDef<Device>[] = [
     },
 ]
 
-interface dataTablePropType {
 
-}
-
-export function DataTableClients(props:dataTablePropType) {
+export function DataTableClients() {
     let params = useParams();
     let projectId = params.projectId as string;
 
