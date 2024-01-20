@@ -244,7 +244,7 @@ export function DataTableModels() {
                 let params = useParams();
                 // @ts-ignore
                 return <div className="flex justify-center">
-                    {active ? "active" : <Button
+                    {active ? <Button disabled={true}>deploy</Button> : <Button
                         onClick={async function() {
                             let projectId = params.projectId as string;
                             let modelId:string = row.getValue("id")
@@ -291,7 +291,6 @@ export function DataTableModels() {
         },
         autoResetAll: false,
         state: {
-            sorting,
             columnFilters,
             columnVisibility,
             rowSelection,
