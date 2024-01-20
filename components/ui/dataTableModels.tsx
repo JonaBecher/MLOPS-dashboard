@@ -69,7 +69,6 @@ export function DataTableModels() {
                 )
             },
             cell: ({ row }) => {
-                let params = useParams();
                 let projectId = params.projectId as string;
                 let modelId:string = row.getValue("id");
                 return <Link href={`http://134.209.232.89:5000/#/experiments/${projectId}/runs/${modelId}`} className="flex justify-center underline">{modelId}</Link>
@@ -241,7 +240,6 @@ export function DataTableModels() {
             },
             cell: ({ row }) => {
                 let active = row.getValue("active")
-                let params = useParams();
                 // @ts-ignore
                 return <div className="flex justify-center">
                     {active ? <Button disabled={true}>deploy</Button> : <Button

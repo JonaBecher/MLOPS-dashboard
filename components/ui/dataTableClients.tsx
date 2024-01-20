@@ -172,7 +172,7 @@ export function DataTableClients() {
             return obj
         })
         return data
-    }, [product_data]);
+    }, [product_data, currentModelId]);
 
 
     const [sorting, setSorting] = React.useState<SortingState>([{id:"online", desc: true}])
