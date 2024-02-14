@@ -4,6 +4,8 @@ Anwendung zum Deployen und Überwachen von Modellen auf Edge-Devices.
 Pakete installieren: `npm install`
 
 Starten: `npm run dev`
+
+Im Browser [öffnen](http://localhost:3000/300530342426941322/dashboard).
 _______ 
 ### Architektur:
 ![Alt text](git-media/architecture.png "Überblick")
